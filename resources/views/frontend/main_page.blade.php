@@ -1,117 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from megamindlab.com/html/rave/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jan 2026 05:29:08 GMT -->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lonyo - IT Solution & Technology Temaptle</title>
 
-<title>Rave - HTML 5 Template Preview</title>
+  <link
+    rel="shortcut icon"
+    href="assets/images/favicon.ico"
+    type="image/x-icon"
+  />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <!--- End favicon-->
 
-<!-- Fav Icon --> 
-<link rel="icon" href="{{ asset('frontend/assets/images/logo.png') }}" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
 
-<!-- Stylesheets -->
-<link href="{{ asset('frontend/assets/css/font-awesome-all.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%406.4.2/css/all.min.css">
-<link href="{{ asset('frontend/assets/css/flaticon.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/owl.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/animate.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/color.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/nice-select.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/global.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/swiper.min.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/timePicker.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend/assets/css/responsive.css') }}" rel="stylesheet">
+  <!-- End google font  -->
 
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/bootstrap.min.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/magnific-popup.css') }}"
+  />
+  <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.css') }}" />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/fontawesome.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/remixicon.css') }}"
+  />
+  <link rel="stylesheet" href="{{ asset('frontend/assets/css/aos.css') }}" />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/niceselect.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/animate.min.css') }}"
+  />
+
+  <!-- Code Editor  -->
+
+  <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css') }}" />
+  <link
+    rel="stylesheet"
+    href="{{ asset('frontend/assets/css/app.min.css') }}"
+  />
 </head>
 
-<!-- page wrapper -->
 <body>
-    <canvas class="tcg-smoke-cursor" id="tcg-smoke-cursor" width="1903" height="517"></canvas>
-    
-    <!-- border -->
-    <div class="body___border">
-        <div class="border__top"></div>
-        <div class="border__left"></div>
-        <div class="border__right"></div>
-        <div class="border__bottom"></div>
+  <div class="preloader">
+    <div class="preloader-inner">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
+  <!-- End preloader -->
 
-    <div class="boxed_wrapper one">
-        <!-- preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div class="preloader-close">Preloader Close</div>
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
-                            <span data-text-preloader="R" class="letters-loading">
-                                R
-                            </span>
-                            <span data-text-preloader="A" class="letters-loading">
-                                A
-                            </span>
-                            <span data-text-preloader="V" class="letters-loading">
-                                V
-                            </span>
-                            <span data-text-preloader="E" class="letters-loading">
-                                E
-                            </span>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        <!-- preloader end -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
 
-
-        <!-- main header -->
-        @include('frontend.body.header')
-        <!-- main-header end -->
-
-
-        @yield('home_page') 
-
-        <!-- main-footer -->
-        @include('frontend.body.footer')
-        <!-- main-footer end -->
-
-
-        <!--Scroll to top-->
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="icon-short-arrow-up"></span>
-        </button>
+  <!-- progress circle -->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+      <div class="top-arrow">
+        <svg width="12" height="20" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.999999 1L8 8L1 15" stroke="#142D6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
     </div>
+  </div>
+  <!-- End All Js -->
 
+  <!-- main header -->
+  @include ('frontend.body.header')
+  <!-- main-header end -->
 
-    <!-- jequery plugins -->
-    <script src="{{ asset('frontend/assets/js/jquery.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/popper.min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/smoke-animation.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/owl.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/timePicker.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/wow.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/validation.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/jquery.fancybox.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/appear.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/jquery.countTo.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/scrollbar.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/nav-tool.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/parallax-scroll.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/swiper-bundle.min.js') }}"></script>
+  {{-- Main body --}}
+  @yield ('home_page')
 
-    <!-- main-js -->
-    <script src="{{ asset('frontend/assets/js/script.js') }}"></script>
+  <!-- main-footer -->
+  @include ('frontend.body.footer')
+  <!-- main-footer end -->
 
-</body><!-- End of .page_wrapper -->
+  <!-- scripts -->
+  <script src="{{ asset('frontend/assets/js/jquery-3.7.1.min.js') }}"></script>
 
-<!-- Mirrored from megamindlab.com/html/rave/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jan 2026 05:29:43 GMT -->
+  <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/menu/menu.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/slick.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/pricing.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/countdown.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/skillbar.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/slick-animation.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/slick-animation.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/faq.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/tabs-slider.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/product-increment.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/aos.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/niceselect.js') }}"></script>
+  <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
+  <script src="{{ asset('frontend/assets/js/slick.js') }}"></script>
+
+  <script src="{{ asset('frontend/assets/js/app.js') }}"></script>
+</body>
 </html>

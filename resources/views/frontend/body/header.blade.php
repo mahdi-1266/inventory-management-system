@@ -1,110 +1,252 @@
-<header class="main-header main-header-update style-one">
-            <!-- header-lower -->
-            <div class="side-nav">
-                <div class="single-header-right sidenav-btn-box">
-                    <a href="#" class="side-nav-open side-nav-opener">
-                        <figure>
-                            <img src="{{ asset('frontend/assets/images/icons/bar.png') }}" alt="">
-                        </figure>
-                    </a>
-                </div>
-            </div>
-            <div class="header-lower">
-                <div class="outer-box">
-                    <div class="logo-box">
-                        <figure class="logo"><a href="#"><img src="{{ asset('frontend/assets/images/logo.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="menu-area">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler">
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                        </div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="">Home</a>
-                                        <ul>
-                                            <li><a href="">Home One</a></li>
-                                            <li><a href="">Home Two</a></li>
-                                            <li><a href="">Home Three</a></li>
-                                            <li class="dropdown"><a href="">Header Style</a>
-                                                <ul>
-                                                    <li><a href="">Header Style 01</a></li>
-                                                    <li><a href="">Header Style 02</a></li>
-                                                    <li><a href="">Header Style 03</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li> 
+<!-- Mobile Menu -->
+<div class="lonyo-menu-wrapper">
+  <div class="lonyo-menu-area text-center">
+    <div class="lonyo-menu-mobile-top">
+      <div class="mobile-logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo-dark.svg" alt="logo" />
+        </a>
+      </div>
+      <button class="lonyo-menu-toggle mobile">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <div class="lonyo-mobile-menu">
+      <ul>
+        <li class="menu-item-has-children">
+          <a href="#">Demo</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="index.html"> Home 01 </a>
+            </li>
+            <li>
+              <a href="index-02.html"> Home 02 </a>
+            </li>
+            <li>
+              <a href="index-03.html"> Home 03 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="#">Pages</a>
+          <ul class="sub-menu">
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Integratios</a>
+              <ul class="sub-menu">
+                <li><a href="integration.html">Integratios</a></li>
+                <li>
+                  <a href="single-integration.html">Integratios Details</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Team</a>
+              <ul class="sub-menu">
+                <li><a href="team.html">team</a></li>
+                <li><a href="single-team.html">team details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Service</a>
+              <ul class="sub-menu">
+                <li><a href="service.html">Service</a></li>
+                <li><a href="single-service.html">Service Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Career</a>
+              <ul class="sub-menu">
+                <li><a href="career.html">Career</a></li>
+                <li><a href="single-career.html">Career details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Utility</a>
+              <ul class="sub-menu">
+                <li><a href="faq.html">faq</a></li>
+                <li><a href="errors-404.html">errors 404</a></li>
+                <li><a href="cooming-soon.html">Cooming Soon</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a class="no-border" href="#">Accounts</a>
+              <ul class="sub-menu">
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="sign-in.html">Sign In</a></li>
+                <li><a href="reset-password.html">Reset Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="#">Portfolio</a>
+          <ul class="sub-menu">
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="single-portfolio.html">Portfolio Details</a></li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="#">Blog</a>
+          <ul class="sub-menu">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="single-blog.html">Blog Details</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="contact-us.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="lonyo-mobile-menu-btn">
+      <a
+        class="lonyo-default-btn sm-size"
+        href="contact-us.html"
+        data-text="Get in Touch"
+        ><span class="btn-wraper">Get in Touch</span></a
+      >
+      <a
+        class="lonyo-default-btn sm-size"
+        href="contact-us.html"
+        data-text="Get in Touch"
+        ><span class="btn-wraper">Get in Touch</span></a
+      >
+    </div>
+  </div>
+</div>
+<!-- End mobile menu -->
 
-                                    <li class="dropdown"><a href="#">Page</a>
-                                        <ul>
-                                            <li><a href="">About Us</a></li>
-                                            <li><a href="">Our Chefs</a></li>
-                                            <li><a href="">Our Menu</a></li>
-                                            <li><a href="">Booking Page</a></li>
-                                            
-                                            <li><a href="">Coming Soon</a></li>
-                                            <li><a href="">My Account</a></li>
-                                            <li><a href="">Reset Password</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="">Blog</a></li>
-                                            <li><a href="">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">Portfolio</a>
-                                        <ul>
-                                            <li><a href="">Portfolio</a></li>
-                                            <li><a href="">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">Shop</a>
-                                        <ul>
-                                            <li><a href="">Shop 01</a></li>
-                                            <li><a href="">Shop 02</a></li>
-                                            <li><a href="">Shop Details</a></li>
-                                            <li><a href="">Cart Page</a></li>
-                                            <li><a href="">Checkout Page</a></li> 
-                                        </ul>
-                                    </li>  
-
-                                    <li class=''><a href="">Contact</a></li> 
-
-                                    <li class=''><a href="{{ route('login') }}">Login</a></li>  
-                                    <li class=''><a href="{{ route('register') }}">Register</a></li>  
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="header__right">
-                        <div class="btn-box">
-                            <a href="" class="theme-btn-three style1">Booking A Table</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--sticky Header-->
-            <div class="sticky-header">
-                <div class="auto-container">
-                    <div class="outer-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="#"><img src="{{ asset('frontend/assets/images/logo.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="menu-area">
-                            <nav class="main-menu clearfix">
-                                <!--Keep This Empty / Menu will come through Javascript-->
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<header class="site-header lonyo-header-section light-bg" id="sticky-menu">
+  <div class="container">
+    <div class="row gx-3 align-items-center justify-content-between">
+      <div class="col-8 col-sm-auto">
+        <div class="header-logo1">
+          <a href="index.html">
+            <img src="assets/images/logo/logo-dark.svg" alt="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="lonyo-main-menu-item">
+          <nav class="main-menu menu-style1 d-none d-lg-block menu-left">
+            <ul>
+              <li class="menu-item-has-children">
+                <a href="#">Demo</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="index.html"> Home 01 </a>
+                  </li>
+                  <li>
+                    <a href="index-02.html"> Home 02 </a>
+                  </li>
+                  <li>
+                    <a href="index-03.html"> Home 03 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Pages</a>
+                <ul class="sub-menu">
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="pricing.html">Pricing</a></li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Integratios</a>
+                    <ul class="sub-menu">
+                      <li><a href="integration.html">Integratios</a></li>
+                      <li>
+                        <a href="single-integration.html"
+                          >Integratios Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Team</a>
+                    <ul class="sub-menu">
+                      <li><a href="team.html">team</a></li>
+                      <li><a href="single-team.html">team details</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Service</a>
+                    <ul class="sub-menu">
+                      <li><a href="service.html">Service</a></li>
+                      <li>
+                        <a href="single-service.html">Service Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Career</a>
+                    <ul class="sub-menu">
+                      <li><a href="career.html">Career</a></li>
+                      <li><a href="single-career.html">Career details</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Utility</a>
+                    <ul class="sub-menu">
+                      <li><a href="faq.html">faq</a></li>
+                      <li><a href="errors-404.html">errors 404</a></li>
+                      <li><a href="cooming-soon.html">Cooming Soon</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a class="no-border" href="#">Accounts</a>
+                    <ul class="sub-menu">
+                      <li><a href="sign-up.html">Sign Up</a></li>
+                      <li><a href="sign-in.html">Sign In</a></li>
+                      <li>
+                        <a href="reset-password.html">Reset Password</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Portfolio</a>
+                <ul class="sub-menu">
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li>
+                    <a href="single-portfolio.html">Portfolio Details</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Blog</a>
+                <ul class="sub-menu">
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="single-blog.html">Blog Details</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-auto d-flex align-items-center">
+        <div class="lonyo-header-info-wraper2">
+          <div class="lonyo-header-info-content">
+            <ul>
+              <li><a href="{{ route('login') }}">Log in</a></li>
+            </ul>
+          </div>
+          <a class="lonyo-default-btn lonyo-header-btn" href="">Book a demo</a>
+        </div>
+        <div class="lonyo-header-menu">
+          <nav class="navbar site-navbar justify-content-between">
+            <!-- Brand Logo-->
+            <!-- mobile menu trigger -->
+            <button class="lonyo-menu-toggle d-inline-block d-lg-none">
+              <span></span>
+            </button>
+            <!--/.Mobile Menu Hamburger Ends-->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
