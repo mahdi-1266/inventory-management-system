@@ -177,47 +177,111 @@
                         </div>
 
                         <div class="card-body mb-0">
-                          <div class="form-group mb-3 row">
-                            <label class="form-label">Old Password</label>
-                            <div class="col-lg-12 col-xl-12">
-                              <input
-                                class="form-control"
-                                type="password"
-                                placeholder="Old Password"
-                              />
+                          <form
+                            action="{{ route('admin.password.update') }}"
+                            method="POST"
+                            enctype="multipart/form-data"
+                          >
+                            @csrf
+                            <div class="form-group mb-3 row">
+                              <label class="form-label">Old Password</label>
+                              <div class="col-lg-12 col-xl-12">
+                                <div class="input-group">
+                                  <span
+                                    class="input-group-text position-absolute show-pass-btn"
+                                    data-target="old_password"
+                                    style="
+                                      cursor: pointer;
+                                      right: 0px;
+                                      border-radius: 0px 5px 5px 0px;
+                                      z-index: 1;
+                                    "
+                                    ><i class="mdi mdi-eye"></i
+                                  ></span>
+                                  <input
+                                    class="form-control form-input @error('old_password') is-invalid @enderror"
+                                    type="password"
+                                    name="old_password"
+                                    id="old_password"
+                                    placeholder="Old Password"
+                                  />
+                                  @error ('old_password')
+                                    <span
+                                      class="text-danger"
+                                      >{{ $message }}</span
+                                    >
+                                  @enderror
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="form-group mb-3 row">
-                            <label class="form-label">New Password</label>
-                            <div class="col-lg-12 col-xl-12">
-                              <input
-                                class="form-control"
-                                type="password"
-                                placeholder="New Password"
-                              />
+                            <div class="form-group mb-3 row">
+                              <label class="form-label">New Password</label>
+                              <div class="input-group">
+                                <div class="col-lg-12 col-xl-12">
+                                  <span
+                                    class="input-group-text position-absolute show-pass-btn"
+                                    data-target="new_password"
+                                    style="
+                                      cursor: pointer;
+                                      right: 10px;
+                                      border-radius: 0px 5px 5px 0px;
+                                      z-index: 1;
+                                    "
+                                    ><i class="mdi mdi-eye"></i
+                                  ></span>
+                                  <input
+                                    class="form-control form-input @error('new_password') is-invalid @enderror"
+                                    type="password"
+                                    name="new_password"
+                                    id="new_password"
+                                    placeholder="New Password"
+                                  />
+                                  @error ('new_password')
+                                    <span
+                                      class="text-danger"
+                                      >{{ $message }}</span
+                                    >
+                                  @enderror
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="form-group mb-3 row">
-                            <label class="form-label">Confirm Password</label>
-                            <div class="col-lg-12 col-xl-12">
-                              <input
-                                class="form-control"
-                                type="password"
-                                placeholder="Confirm Password"
-                              />
+                            <div class="form-group mb-3 row">
+                              <label class="form-label">Confirm Password</label>
+                              <div class="input-group">
+                                <div class="col-lg-12 col-xl-12">
+                                  <span
+                                    data-target="new_password_confirmation"
+                                    class="input-group-text position-absolute show-pass-btn"
+                                    style="
+                                      cursor: pointer;
+                                      right: 10px;
+                                      border-radius: 0px 5px 5px 0px;
+                                      z-index: 1;
+                                    "
+                                    ><i class="mdi mdi-eye"></i
+                                  ></span>
+                                  <input
+                                    class="form-control form-input"
+                                    type="password"
+                                    name="new_password_confirmation"
+                                    id="new_password_confirmation"
+                                    placeholder="Confirm Password"
+                                  />
+                                </div>
+                              </div>
                             </div>
-                          </div>
 
-                          <div class="form-group row">
-                            <div class="col-lg-12 col-xl-12">
-                              <button type="submit" class="btn btn-primary">
-                                Change Password
-                              </button>
-                              <button type="button" class="btn btn-danger">
-                                Cancel
-                              </button>
+                            <div class="form-group row">
+                              <div class="col-lg-12 col-xl-12">
+                                <button type="submit" class="btn btn-primary">
+                                  Change Password
+                                </button>
+                                <button type="submit" class="btn btn-danger">
+                                  Cancel
+                                </button>
+                              </div>
                             </div>
-                          </div>
+                          </form>
                         </div>
                         <!--end card-body-->
                       </div>

@@ -8,10 +8,14 @@
 
   <link
     rel="shortcut icon"
-    href="assets/images/favicon.ico"
+    href="{{ asset('frontend/assets/images/favicon.ico') }}"
     type="image/x-icon"
   />
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link
+    rel="icon"
+    href="{{ asset('frontend/assets/images/favicon.ico') }}"
+    type="image/x-icon"
+  />
   <!--- End favicon-->
 
   <link
