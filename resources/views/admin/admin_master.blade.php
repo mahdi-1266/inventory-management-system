@@ -115,6 +115,10 @@
   <!-- Widgets Init Js -->
   <script src="{{ asset('backend/assets/js/pages/analytics-dashboard.init.js') }}"></script>
 
+  {{-- Sweetalert cdn links --}}
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+
   <!-- App js-->
   <script src="{{ asset('backend/assets/js/app.js') }}"></script>
   <script src="{{ asset('backend/assets/js/script.js') }}"></script>

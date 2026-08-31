@@ -7,19 +7,19 @@ use Illuminate\Support\Facades\Route;
 
 // Home Page Route
 Route::get('/', function () {
-    return view('frontend.index');
+  return view('frontend.index');
 });
 
 // Dashboard Page Route
 Route::get('/dashboard', function () {
-    return view('admin.index');
+  return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+  Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+  Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+  Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 }); 
 
 require __DIR__.'/auth.php';
@@ -31,15 +31,20 @@ Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admi
 
 // Admin Profile
 Route::middleware('auth')->group(function () {
-    Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
-    Route::post('/profile/store', [AdminController::class, 'ProfileStore'])->name('profile.store');
-    Route::post('/admin/password/update', [AdminController::class, 'AdminPasswordUpdate'])->name('admin.password.update');
+  Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
+  Route::post('/profile/store', [AdminController::class, 'ProfileStore'])->name('profile.store');
+  Route::post('/admin/password/update', [AdminController::class, 'AdminPasswordUpdate'])->name('admin.password.update');
 }); 
 
 
 // Brand Manger Route
 Route::middleware('auth')->group(function () {
-    Route::controller(BrandController::class)->group(function(){
-        Route::get('/all/brand', 'AllBrand')->name('all.brand');
-    });
+  Route::controller(BrandController::class)->group(function(){
+    Route::get('/all/brand', 'AllBrand')->name('all.brand');
+    Route::get('/add/brand', 'AddBrand')->name('add.brand');
+    Route::post('/store/brand', 'StoreBrand')->name('store.brand');
+    Route::get('/edit/brand/{id}', 'EditBrand')->name('edit.brand');
+    Route::post('/update/brand', 'UpdateBrand')->name('update.brand');
+    Route::get('/delete/brand/{id}', 'DeleteBrand')->name('delete.brand');
+  });
 }); 

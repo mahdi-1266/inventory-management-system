@@ -10,10 +10,9 @@
 
         <div class="text-end">
           <ol class="breadcrumb m-0 py-0">
-            <li class="breadcrumb-item">
-              <a href="javascript: void(0);">Tables</a>
-            </li>
-            <li class="breadcrumb-item active">Data Tables</li>
+            <a href="{{ route('add.brand') }}" class="btn btn-secondary"
+              >Add Brand</a
+            >
           </ol>
         </div>
       </div>
@@ -48,8 +47,17 @@
                         />
                       </td>
                       <td>
-                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                        <a
+                          href="{{ route('edit.brand', $logo->id) }}"
+                          class="btn btn-success btn-sm"
+                          >Edit</a
+                        >
+                        <a
+                          href="{{ route('delete.brand', $logo->id) }}"
+                          class="btn btn-danger btn-sm"
+                          id="deleteBrand"
+                          >Delete</a
+                        >
                       </td>
                     </tr>
                   @endforeach
