@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\WareHouseController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\SupplierController;
+use App\Http\Controllers\Backend\CustomerController;
 
 // Home Page Route
 Route::get('/', function () {
@@ -40,6 +42,8 @@ Route::middleware('auth')->group(function () {
 
 // Brand Manger Route
 Route::middleware('auth')->group(function () {
+
+  // 
   Route::controller(BrandController::class)->group(function(){
     Route::get('/all/brand', 'AllBrand')->name('all.brand');
     Route::get('/add/brand', 'AddBrand')->name('add.brand');
@@ -48,11 +52,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/update/brand', 'UpdateBrand')->name('update.brand');
     Route::get('/delete/brand/{id}', 'DeleteBrand')->name('delete.brand');
   });
-}); 
 
-
-// WareHouse Manager Route
-Route::middleware('auth')->group(function () {
+  // WareHouse Manager Route
   Route::controller(WareHouseController::class)->group(function(){
     Route::get('/all/warehouse', 'AllWareHouses')->name('all.warehouse');
     Route::get('/add/warehouse', 'AddWareHouse')->name('add.warehouse');
@@ -60,5 +61,26 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit/warehouse/{id}', 'EditWareHouse')->name('edit.warehouse');
     Route::post('/update/warehouse', 'UpdateWareHouse')->name('update.warehouse');
     Route::get('/delete/warehouse/{id}', 'DeleteWareHouse')->name('delete.warehouse');
+  });
+
+
+  // Supplier Manager Route
+  Route::controller(SupplierController::class)->group(function(){
+    Route::get('/all/supplier', 'AllSupplier')->name('all.supplier');
+    Route::get('/add/supplier', 'AddSupplier')->name('add.supplier');
+    Route::post('/store/supplier', 'StoreSupplier')->name('store.supplier');
+    Route::get('/edit/supplier/{id}', 'EditSupplier')->name('edit.supplier');
+    Route::post('/update/supplier', 'UpdateSupplier')->name('update.supplier');
+    Route::get('/delete/supplier/{id}', 'DeleteSupplier')->name('delete.supplier');
+  });
+
+  // Customer Manager Route
+  Route::controller(CustomerController::class)->group(function(){
+    Route::get('/all/customer', 'AllCustomer')->name('all.customer');
+    Route::get('/add/customer', 'AddCustomer')->name('add.customer');
+    Route::post('/store/customer', 'StoreCustomer')->name('store.customer');
+    Route::get('/edit/customer/{id}', 'EditCustomer')->name('edit.customer');
+    Route::post('/update/customer', 'UpdateCustomer')->name('update.customer');
+    Route::get('/delete/customer/{id}', 'DeleteCustomer')->name('delete.customer');
   });
 }); 

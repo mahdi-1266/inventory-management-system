@@ -1,5 +1,4 @@
 let showPassworBtn = document.querySelectorAll(".show-pass-btn");
-// let inputPassword = document.querySelectorAll(".form-input");
 
 showPassworBtn.forEach((btn) => {
   btn.addEventListener("click", function () {

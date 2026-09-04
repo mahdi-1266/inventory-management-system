@@ -5,13 +5,13 @@
     <div class="container-xxl">
       <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
         <div class="flex-grow-1">
-          <h4 class="fs-18 fw-semibold m-0">All WareHouse</h4>
+          <h4 class="fs-18 fw-semibold m-0">All Customer</h4>
         </div>
 
         <div class="text-end">
           <ol class="breadcrumb m-0 py-0">
-            <a href="{{ route('add.warehouse') }}" class="btn btn-secondary"
-              >Add WareHouse</a
+            <a href="{{ route('add.customer') }}" class="btn btn-secondary"
+              >Add Customer</a
             >
           </ol>
         </div>
@@ -32,27 +32,27 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>City</th>
+                    <th>Address</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($warehouse as $key => $item)
+                  @foreach ($customer as $key => $item)
                     <tr>
                       <td>{{ $key + 1 }}</td>
                       <td>{{ $item->name }}</td>
                       <td>{{ $item->email }}</td>
                       <td>{{ $item->phone }}</td>
-                      <td>{{ $item->city }}</td>
+                      <td>{{ Str::limit($item->address, 50, '...') }}</td>
 
                       <td>
                         <a
-                          href="{{ route('edit.warehouse', $item->id) }}"
+                          href="{{ route('edit.customer', $item->id) }}"
                           class="btn btn-success btn-sm"
                           >Edit</a
                         >
                         <a
-                          href="{{ route('delete.warehouse', $item->id) }}"
+                          href="{{ route('delete.customer', $item->id) }}"
                           class="btn btn-danger btn-sm"
                           id="deleteBrand"
                           >Delete</a

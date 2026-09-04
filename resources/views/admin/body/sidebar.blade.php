@@ -51,7 +51,7 @@
 
         <li>
           <a href="#sidebarAuth" data-bs-toggle="collapse">
-            <i data-feather="users"></i>
+            <i data-feather="codesandbox"></i>
             <span>Brand Manage</span>
             <span class="menu-arrow"></span>
           </a>
@@ -66,7 +66,7 @@
 
         <li>
           <a href="#WareHouse" data-bs-toggle="collapse">
-            <i data-feather="users"></i>
+            <i data-feather="home"></i>
             <span>WareHouse Manage</span>
             <span class="menu-arrow"></span>
           </a>
@@ -75,6 +75,40 @@
               <li>
                 <a href="{{ route('all.warehouse') }}" class="tp-link"
                   >All WareHouses</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#Supplier" data-bs-toggle="collapse">
+            <i data-feather="users"></i>
+            <span>Supplier Manage</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="Supplier">
+            <ul class="nav-second-level">
+              <li>
+                <a href="{{ route('all.supplier') }}" class="tp-link"
+                  >All Supplier</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#Customer" data-bs-toggle="collapse">
+            <i data-feather="users"></i>
+            <span>Customer Manage</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="Customer">
+            <ul class="nav-second-level">
+              <li>
+                <a href="{{ route('all.customer') }}" class="tp-link"
+                  >All Customer</a
                 >
               </li>
             </ul>

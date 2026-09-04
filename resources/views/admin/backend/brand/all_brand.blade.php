@@ -28,8 +28,8 @@
               >
                 <thead>
                   <tr>
-                    <th>Serial No.</th>
-                    <th>Brand Name</th>
+                    <th>ID</th>
+                    <th>Name</th>
                     <th>Logo</th>
                     <th>Action</th>
                   </tr>
