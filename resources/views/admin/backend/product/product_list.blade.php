@@ -1,0 +1,99 @@
+@extends ('admin.admin_master')
+@section ('admin_body')
+  <div class="content">
+    <!-- Start Content-->
+    <div class="container-xxl">
+      <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
+        <div class="flex-grow-1">
+          <h4 class="fs-18 fw-semibold m-0">All Products</h4>
+        </div>
+
+        <div class="text-end">
+          <ol class="breadcrumb m-0 py-0">
+            <a href="{{ route('add.product') }}" class="btn btn-secondary"
+              >Add Product</a
+            >
+          </ol>
+        </div>
+      </div>
+
+      <!-- Datatables  -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <table
+                id="datatable"
+                class="table table-bordered dt-responsive table-responsive nowrap"
+              >
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Warehouse</th>
+                    <th>Price</th>
+                    <th>In Stock</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($allData as $key => $item)
+                    <tr>
+                      <td>{{ $key + 1 }}</td>
+                      <td>{{ $item->name }}</td>
+                      <td>
+                        @php
+                          $primaryImage = $item->image->first()->image ?? 'upload/no_image.jpg'   
+                        @endphp
+                        <img
+                          src="{{ $primaryImage }}"
+                          alt="image"
+                          width="40px"
+                        />
+                      </td>
+                      <td>{{ $item->warehouse_id }}</td>
+                      <td>{{ $item->price }}</td>
+                      <td>
+                        @if ($item->product_qty <= 3)
+                          <span
+                            class="badge text-bg-danger"
+                            >{{ $item->product_qty }}</span
+                          >
+
+                        @else
+                          <h4>
+                            <span
+                              class="badge text-bg-secondary"
+                              >{{ $item->product_qty }}</span
+                            >
+                          </h4>
+                        @endif
+                      </td>
+
+                      <td>
+                        <a
+                          href="{{ route('edit.supplier', $item->id) }}"
+                          class="btn btn-success btn-sm"
+                          >Edit</a
+                        >
+                        <a
+                          href="{{ route('delete.supplier', $item->id) }}"
+                          class="btn btn-danger btn-sm"
+                          id="deleteBrand"
+                          >Delete</a
+                        >
+                      </td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </div>
+  <!-- content -->
+@endsection
